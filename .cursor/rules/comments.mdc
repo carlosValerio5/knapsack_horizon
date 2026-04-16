@@ -1,0 +1,7 @@
+---
+alwaysApply: true
+---
+
+- Add comments only when strictly necessary.
+- Write docstrings for every module, function and class.
+- All the comments and docstrings MUST BE WRITTEN IN SPANISH.
