@@ -8,12 +8,13 @@ Implementación en Python del **tema 14** del Producto Integrador de Aprendizaje
 
 | Ruta | Descripción |
 |------|-------------|
+| `docs/Reporte_2049129.pdf` | Reporte del proyecto explicando las decisiones y proceso de desarrollo. |
 | `solve.py` | Punto de entrada y lógica de resolución: programación dinámica en dos dimensiones (capital en miles de MXN y riesgo) y, si está instalado PuLP, modelo de **programación lineal entera** (PuLP + CBC) para contrastar la misma solución. Incluye utilidades de medición de tiempos y ejecución en paralelo de métodos. |
 | `datos_portafolio.py` | Datos del escenario: clase `Instrumento`, presupuestos globales (`PRESUPUESTO_CAPITAL_MXN`, `PRESUPUESTO_RIESGO_PTS`), catálogo `INSTRUMENTOS` y función `resumen_escenario()` usada al arrancar la solución. |
 | `__init__.py` | Marca el directorio como paquete Python (metadatos del módulo del proyecto). |
 | `requirements.txt` | Dependencias: `pulp>=3.0` (el solver CBC suele distribuirse con PuLP). |
-| `INSTRUCCIONES_PROYECTO.md` | Lineamientos del PIA, rúbrica y contexto académico del curso. |
-| `estructura_datos_portafolio.md` | Documentación del escenario ficticio, variables del modelo y convenciones de datos (alineado con el catálogo en `datos_portafolio.py`). |
+| `docs/INSTRUCCIONES_PROYECTO.md` | Lineamientos del PIA, rúbrica y contexto académico del curso. |
+| `docs/estructura_datos_portafolio.md` | Documentación del escenario ficticio, variables del modelo y convenciones de datos (alineado con el catálogo en `datos_portafolio.py`). |
 
 Los archivos `.py` deben ejecutarse con el directorio del proyecto en el `PYTHONPATH` (por ejemplo, situándose en la carpeta raíz del repositorio antes de invocar `python`).
 
