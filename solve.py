@@ -1,4 +1,45 @@
 """
+Instrucciones de ejecucion:
+## Requisitos
+
+- **Python** 3.10 o superior (el proyecto usa anotaciones de tipos modernas).
+- Opcional pero recomendado: entorno virtual (`.venv` u otro nombre).
+
+---
+
+## Instalación
+
+Desde la raíz del proyecto (`pia/`):
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # En Windows: .venv\\Scripts\\activate
+pip install -r requirements.txt
+```
+
+Si no instala PuLP, el programa igual ejecutará la solución por **programación dinámica**; el mensaje en consola indicará que PuLP no está disponible y no se comparará con el modelo entero.
+
+---
+
+## Cómo ejecutar la solución
+
+Con el entorno activado y estando en la carpeta que contiene `solve.py` y `datos_portafolio.py`:
+
+```bash
+python solve.py
+```
+
+La salida incluye:
+
+1. Un **resumen del escenario** (valores devueltos por `datos_portafolio.resumen_escenario()`).
+2. **Tiempos de ejecución** de los métodos habilitados (DP y, si aplica, PuLP), calculados en procesos separados.
+3. **Utilidad esperada**, capital y riesgo usados frente a los presupuestos.
+4. La **lista de instrumentos seleccionados** según la máscara de la solución óptima.
+
+Para modificar el caso de estudio, edita los presupuestos y el catálogo en `datos_portafolio.py` y, si cambias la semántica de los datos, actualiza la narrativa en `estructura_datos_portafolio.md` para mantener coherencia con el reporte escrito del PIA.
+
+---
+
 Resolución del problema de mochila 0-1 bidimensional (capital y riesgo).
 
 Incluye: enumeración por máscaras (fuerza bruta), programación dinámica en
